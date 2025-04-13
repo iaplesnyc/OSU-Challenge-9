@@ -18,17 +18,16 @@ API Calls
 
 */
 
-const fetchWeather = async (cityName: string) => {
+const fetchWeather = async (city: string) => {
   const response = await fetch('/api/weather/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ city: cityName }), // ✅ FIXED
+    body: JSON.stringify({ city }),
   });
 
   const weatherData = await response.json();
-
   console.log('weatherData: ', weatherData);
 
   const forecast = weatherData.forecast;
@@ -37,9 +36,9 @@ const fetchWeather = async (cityName: string) => {
     city: weatherData.city.name,
     date: new Date().toISOString().split('T')[0],
     icon: forecast[0].icon,
-    iconDescription: forecast[0].description,
-    tempF: forecast[0].temp,
-    windSpeed: forecast[0].wind,
+    iconDescription: forecast[0].iconDescription,
+    tempF: forecast[0].tempF,
+    windSpeed: forecast[0].windSpeed,
     humidity: forecast[0].humidity,
   };
 
@@ -221,8 +220,9 @@ Event Handlers
 const handleSearchFormSubmit = (event: any): void => {
   event.preventDefault();
 
-  if (!searchInput.value) {
-    throw new Error('City cannot be blank');
+  if (!searchInput.value.trim()) {
+    alert('Please enter a city name.');
+    return;
   }
 
   const search = searchInput.value.trim();
