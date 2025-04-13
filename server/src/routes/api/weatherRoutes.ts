@@ -16,9 +16,9 @@ router.post('/', async (req: Request, res: Response) => {
     const weatherData = await WeatherService.getForecastForCity(city);
     const savedCity = await HistoryService.addCity(city);
 
-    res.json({ city: savedCity, forecast: weatherData });
+    return res.json({ city: savedCity, forecast: weatherData });
   } catch (err) {
-    res.status(500).json({ error: 'Failed to retrieve weather data' });
+    return res.status(500).json({ error: 'Failed to retrieve weather data' });
   }
 });
 
@@ -26,9 +26,9 @@ router.post('/', async (req: Request, res: Response) => {
 router.get('/history', async (_req: Request, res: Response) => {
   try {
     const history = await HistoryService.getHistory();
-    res.json(history);
+    return res.json(history);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to load search history' });
+    return res.status(500).json({ error: 'Failed to load search history' });
   }
 });
 
@@ -37,9 +37,9 @@ router.delete('/history/:id', async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const updatedHistory = await HistoryService.deleteCity(id);
-    res.json(updatedHistory);
+    return res.json(updatedHistory);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to delete city' });
+    return res.status(500).json({ error: 'Failed to delete city' });
   }
 });
 

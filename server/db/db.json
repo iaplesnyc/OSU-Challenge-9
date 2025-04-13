@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "b39928a0-91b1-4198-acc5-883861eae391",
+    "name": "New York"
+  },
+  {
+    "id": "02c331e3-e19f-40be-a50d-1d59584ddc84",
+    "name": "San Diego"
+  },
+  {
+    "id": "a6a5bd54-bae0-4c26-b7ba-f67af3ac30eb",
+    "name": "Austin"
+  },
+  {
+    "id": "083cd73b-eb5d-40da-9edc-9dd333500cf8",
+    "name": "Columbus"
+  },
+  {
+    "id": "5c0990d0-b949-4824-8b82-f62fdc6d5380",
+    "name": "Orlando"
+  },
+  {
+    "id": "deafc5c6-fe55-4be7-8160-41c0e6bdfb49",
+    "name": "San Francisco"
+  },
+  {
+    "id": "6eb9e712-9c0b-4e0f-a9a6-477c3ce07301",
+    "name": "Seattle"
+  },
+  {
+    "id": "6b592f3f-9bb7-441b-9220-902137419561",
+    "name": "Atlanta"
+  },
+  {
+    "id": "a5a0cd4e-8adb-4264-8b59-c5498029337d",
+    "name": "Chicago"
+  }
+]
