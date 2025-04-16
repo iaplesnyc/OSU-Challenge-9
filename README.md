@@ -68,7 +68,7 @@ Weather data is fetched from the [OpenWeather 5-day forecast API](https://openwe
 
 ## Deployment
 
-Live site: [https://your-weather-dashboard.onrender.com](https://your-weather-dashboard.onrender.com)  
+Live site: [https://osu-challenge-9-weather-dashboard.onrender.com]  
 GitHub repo: [https://github.com/iaplesnyc/OSU-Challenge-9]
 
 ## Screenshot
