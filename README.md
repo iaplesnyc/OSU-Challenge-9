@@ -73,7 +73,7 @@ GitHub repo: [https://github.com/iaplesnyc/OSU-Challenge-9]
 
 ## Screenshot
 
-![Weather Dashboard Screenshot](./Assets/09-servers-and-apis-homework-demo.png)
+![Weather Dashboard Screenshot](./Assets/weather-screenshot.png)
 
 ## Author
 
